@@ -1,0 +1,29 @@
+function changeImage(sport) {
+  const images = {
+    soccer: 'https://urbancolex.com/wp-content/uploads/2020/07/tama%C3%B1o-de-la-pelota-de-futbol-11.png',
+    basketball: 'https://www.idsports.es/blogadmin/uploads/resize/3_1714655611-pexels-markusspiske-1752757.jpg',
+    tennis: 'https://as1.ftcdn.net/v2/jpg/00/70/05/80/1000_F_70058017_1kSAVhc690JLMEU7nL4PoHuIWTzws2pk.jpg',
+    baseball: 'https://static.wikia.nocookie.net/deportes/images/b/b9/Beisbol_%28un_deporte_tan_colectivo%29.jpg/revision/latest/scale-to-width-down/340?cb=20200911121448&path-prefix=es'
+  };
+
+  const imageElement = document.getElementById(sport).querySelector('img');
+  imageElement.src = images[sport];
+}
+
+// Función para cambiar el texto al escribir en el campo
+const textInput = document.getElementById('text-input');
+const changedText = document.getElementById('changed-text');
+
+textInput.addEventListener('input', function() {
+  changedText.textContent = textInput.value;
+});
+
+// Función para mover el objeto
+let position = 0;
+const movingObject = document.getElementById('moving-object');
+
+setInterval(() => {
+  position += 100;
+  if (position > window.innerWidth) position = -100;
+  movingObject.style.left = `${position}px`;
+}, 1000);
