@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Deportiva Interactiva</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Galería Deportiva Interactiva</h1>
+    <p>Explora el mundo de los deportes con esta galería interactiva.</p>
+  </header>
+
+  <section class="gallery">
+    <div class="image-card" id="soccer" onclick="changeImage('soccer')">
+      <img src="images/soccer.jpg" alt="Fútbol">
+      <p>Fútbol</p>
+    </div>
+    <div class="image-card" id="basketball" onclick="changeImage('basketball')">
+      <img src="images/basketball.jpg" alt="Baloncesto">
+      <p>Baloncesto</p>
+    </div>
+    <div class="image-card" id="tennis" onclick="changeImage('tennis')">
+      <img src="images/tennis.jpg" alt="Tenis">
+      <p>Tenis</p>
+    </div>
+    <div class="image-card" id="baseball" onclick="changeImage('baseball')">
+      <img src="images/baseball.jpg" alt="Béisbol">
+      <p>Béisbol</p>
+    </div>
+  </section>
+
+  <section class="interactive">
+    <label for="text-input">Introduce un texto para cambiar el encabezado:</label>
+    <input type="text" id="text-input" placeholder="Escribe algo aquí">
+    <p id="changed-text">Texto original</p>
+  </section>
+
+  <div id="moving-object">
+    <img src="images/soccer.jpg" alt="Objeto en movimiento">
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
